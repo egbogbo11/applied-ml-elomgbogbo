@@ -1,38 +1,114 @@
-# applied-ml-template
+# applied-ml-elomgbogbo
 
-Start by copying this template repository into your GitHub account. Replace "template" with your name or alias, e.g. applied-ml-case.
+## Make repository in Github and clone to local workspace
+```bash
+git clone https://github.com/egbogbo11/datafun-04-eda 
+```
 
-We will use this repo for several lab projects. 
+## Create .gitignore file
+Ensure the following entries are added to your .gitignore file to exclude unnecessary files from being committed:
 
-## Set up Machine and Follow Professional Workflow
+```bash
+# Python virtual environment folder
+.venv/
 
-Read and follow the standard set up and work flow provided at Professional Analytics: Project Setup / Initialization / Standard Workflow
+# Visual Studio Code settings and workspace folder - Ignore entire .vscode folder except settings.json
+.vscode/*
+!.vscode/settings.json
 
-- [pro-analytics-01](https://github.com/denisecase/pro-analytics-01)
+# Compiled Python files
+__pycache__/
 
-## Contents of this Repository
+# macOS system files
+.DS_Store
 
-- .venv - this folder will appear when you create your virtual environment
-- .vscode - this folder has some settings that help VS Code & Pylance find packages
-- .gitignore - keep .venv and other stuff out of source control
-- README.md - introduction to this repository
-- requirements.txt - list of external packages used (read this)
+# Jupyter Notebook checkpoint files
+.ipynb_checkpoints
+```
 
-## Folders for Examples
+## Create and activate virtual environment
 
-Starter files for the example labs
+Create a virtual environment:
 
-- example01 folder
-- example02 folder
+```bash
+python -m venv .venv
+```
 
-## Folders for Lab Projects
+Activate the virtual environment:
 
-Each lab project will be completed in its own folder.
+```bash
+.\.venv\Scripts\activate
+```
+## Create requirement.txt and download imports
+Add the following libraries to your requirements.txt file:
 
-- lab01 folder:
-   - ml01.ipynb - COMPLETE THIS 
-   - ml01.py - working script with just the code
-   - README.md - instructions - modify this to present your lab project
+```bash
+jupyterlab
+numpy
+pandas
+pyarrow
+matplotlib
+seaborn
+scklit-learn
+```
+
+Install into your active project virtual environment with this command:
+
+```bash
+py -m pip install -r requirements.txt
+```
+## Stage and Push Files to GitHub
+
+Use the following Git commands to stage and commit changes:
+
+```bash
+git add .
+git commit -m "commit: message"
+git push origin main
+```
+# Lab 1
+# Example California Housing Price Prediction
+**Author:** Elom Gbogbo 
+
+**Date:** March 13, 2025
+  
+**Objective:** Predict the median house price in California using available housing features.
+
+## Introduction
+This project uses the California housing dataset to predict house prices based on features such as median income, average number of rooms, and house age. We'll clean the data, train a linear regression model, and explore ways to improve performance.
+
+https://github.com/egbogbo11/applied-ml-elomgbogbo/blob/main/lab01/ml01.ipynb 
+
+## Project Outline
+### Imports
+- Import the external Python libraries used (e.g., pandas, numpy, matplotlib, seaborn, sklearn, etc.) 
+  
+### Section 1. Load and Explore the Data
+- 1.1 Load the dataset and display the first 10 rows.
+- 1.2 Check for missing values and display summary statistics.
+
+Analysis: What do you notice about the dataset? Are there any data issues?
+
+### Section 2. Visualize Feature Distributions
+- 2.1 Create histograms, boxplots, and scatterplots.
+- 2.2 Identify patterns or anomalies in feature distributions.
+
+Analysis: What patterns or anomalies do you see? Do any features stand out?
+
+### Section 3. Feature Selection and Justification
+- 3.1 Choose two input features for predicting the target.
+- 3.2 Justify your selection with reasoning.
+
+Analysis: Why did you choose these features? How might they impact predictions?
+
+### Section 4. Train a Linear Regression Model
+- 4.1 Define X (features) and y (target).
+- 4.2 Train a Linear Regression model using Scikit-Learn.
+- 4.3 Report R^2, MAE, RMSE.
+
+Analysis: How well did the model perform? Any surprises in the results?
+
+
 
 
 
