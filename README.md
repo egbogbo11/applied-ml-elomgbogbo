@@ -2,7 +2,7 @@
 
 ## Make repository in Github and clone to local workspace
 ```bash
-git clone https://github.com/egbogbo11/datafun-04-eda 
+git clone https://github.com/egbogbo11/applied-ml-elomgbogbo
 ```
 
 ## Create .gitignore file
